@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
         - name: backend
-          image: nahid0002/three-tier-backend:v1
+          image: rajendra0968jangid/three-tier-backend:v1
           ports:
             - containerPort: 3500
+              hostPort: 3500   
           env:
             - name: host
               value: mysql-service
@@ -47,4 +48,4 @@ spec:
   ports:
     - port: 3500             # internal pod port
       targetPort: 3500       # container port
-      nodePort: 31350        # external port on host (choose 30000-32767)
+      # nodePort: 31350        # external port on host (choose 30000-32767)
