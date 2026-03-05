@@ -49,7 +49,7 @@ Before you begin, ensure that you have the following installed:
      ```
    - Run the backend container:
      ```bash
-     docker run -d -p 3500:3500 --name backend-container --network=three-tier-network backend
+     docker run -d -p 3500:3500 -e host=mysql-container -e user=root -e password=mysql123 -e database=school --name backend-container --network=three-tier-network backend
      ```
 
 3. **Frontend Application:**
